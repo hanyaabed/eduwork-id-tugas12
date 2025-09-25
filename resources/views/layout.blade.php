@@ -10,38 +10,27 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyEcommerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="{{ route('home_page') }}" aria-current="page" class="nav-link text-white">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('product_page') }}" aria-current="page"
-                            class="nav-link text-white">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('cart_page') }}" aria-current="page" class="nav-link text-white">Cart</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ route('home_page') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('product_page') }}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('cart_page') }}">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Checkout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>
-        @yield('header')
-    </h1>
-    <main class="flex-grow-1">
-        @yield('content')
-    </main>
-    <footer class="bg-body-tertiary text-center text-lg-start mt-auto">
-        <div class="text-center p-3">
-            This is footer
-        </div>
+    @yield('header')
+    @yield('content')
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 MyEcommerce. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
