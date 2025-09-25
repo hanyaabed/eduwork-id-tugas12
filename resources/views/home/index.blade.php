@@ -1,6 +1,7 @@
 @extends('layout')
 @section('title', 'My Ecommerce')
-@section('header')
+@section('content')
+    <!-- Hero Section -->
     <header class="bg-light py-5 text-center">
         <div class="container">
             <h1 class="display-4">Welcome to MyEcommerce</h1>
@@ -8,8 +9,7 @@
             <a href="#products" class="btn btn-primary btn-lg">Shop Now</a>
         </div>
     </header>
-@endsection
-@section('content')
+    
     <!-- Products Section -->
     <section id="products" class="py-5">
         <div class="container">
